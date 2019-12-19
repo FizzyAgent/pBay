@@ -1,0 +1,59 @@
+create database ebay_db;
+
+use ebay_db;
+
+create table user(
+	username varchar(32),
+	name varchar(64) not null,
+	password varchar(32) not null,
+	gender varchar(1),
+	country varchar(32),
+	primary key (username)
+);
+
+create table item(
+	id int auto_increment,
+	name varchar(255) not null,
+	image varchar(255) default null,
+	price float(12,2) not null,
+	seller varchar(32) not null,
+	datetime timestamp default now(),
+	info varchar(3000) default null,
+	sold tinyint(1) default 0 not null,
+	tag varchar(15) not null,
+	primary key (id),
+	foreign key (seller) references user(username)
+);
+
+create table transaction(
+	item int,
+	seller varchar(32) not null,
+	buyer varchar(32) not null,
+	amount float(12,2) not null,
+	datetime timestamp default now(),
+	primary key (item),
+	foreign key (item) references item(id),
+	foreign key (seller) references item(seller),
+	foreign key (buyer) references user(username)
+);
+
+insert into user values ('jtan','John Tan','pass','M','USA');
+insert into user values ('mlee','Mary Lee','pass','F','Germany');
+insert into user values ('bhoo','Boris Hoo','pass','M','Singapore');
+insert into user values ('cwt','Chua Wei Tek','pass','O','Singapore');
+insert into user values ('msmith','Marion Smith','pass','M','UK');
+
+insert into item (name,price,seller,info,tag) values ('Table Lamp','10','jtan','It is a nice lamp','101000000100000');
+insert into item (name,price,seller,info,tag) values ('2015 Lamborghini Aventador','2100000','cwt','Old car my dad bought for me','000000001110000');
+insert into item (name,price,seller,info,tag) values ('Vintage Oil Painting','500','msmith','Old painting from 1980s depicting the great war','000100100000000');
+insert into item (name,price,seller,info,tag) values ('Hiking Bagpack','40','bhoo','Good for travel, slightly worn','000000000110000');
+insert into item (name,price,seller,info,tag) values ('Photoshop CS6','30','cwt','Unused copy, still in packaging','100000000001000');
+insert into item (name,price,seller,info,tag) values ('Chrome Drumset','150','mlee','Slightly rusty, but still in good condition','001000000000100');
+insert into item (name,price,seller,info,tag) values ('V16 Engine Block','50000','mlee','Brand new, makes a nice living room center piece!','000100101000000');
+insert into item (name,price,seller,info,tag) values ('Wooden Acoustic Guitar','80','msmith','Good condition','001000000000100');
+insert into item (name,price,seller,info,tag) values ('Silver-plated Rolex Watch','1000','bhoo','1 year old, comes with box','100001000100000');
+insert into item (name,price,seller,info,tag) values ('Cannon D700 DSLR','750','mlee','Gift from friend, comes with 10x lens','100000000110000');
+insert into item (name,price,seller,info,tag) values ('Vintage Church Bell','2500','jtan','Slightly rusty, has a nice ring to it','000100100000100');
+insert into item (name,price,seller,info,tag) values ('MacBook Pro 2017','1500','cwt','Old laptop my mom bought for me','101000000101000');
+insert into item (name,price,seller,info,tag) values ('100% Cotton Teddy Bear','30','jtan','Pretty much new, slightly hugged','011001000000010');
+insert into item (name,price,seller,info,tag) values ('Antique Grandfather Clock','400','mlee','Inheritance, works 90% of the time, the other 10% I cannot tell the time','000100100100000');

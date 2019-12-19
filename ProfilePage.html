@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+
+<title>pBay</title>
+<link rel='stylesheet' href='ProfileStyle.css'>
+
+</head>
+
+<body onload='queryProfile("username=un")'>
+
+<script src='AccountCheck.js'></script>
+<script src='MainFunc.js'></script>
+<script src='QueryTable.js'></script>
+<script src='ProfileFunc.js'></script>
+<script src='QueryProfile.js'></script>
+
+<div class='header' id='header'>
+<button class='hlinks' style='float:left' onclick='window.location = "MainPage.html"'>Browse</button>
+<input class='sBar' type='text' id='sBar' placeholder='Search...'>
+<input class='sBtn' type='submit' id='sBtn' value='Search' onclick='search()'>
+<button class='hlinks' id='logout' style='float:right' onclick='logout()'>Log Out</button>
+<button class='hlinks' style='float:right' onclick='window.location = "ProfilePage.html"'>Profile</button>
+</div>
+
+<div class='content' id='profileContent'>
+<img id='pImg' title='Image'>
+<h1 class='pProfile' id='pName'>Name</h1>
+<p class='pProfile' id='pGender'>Gender: </p>
+<p class='pProfile' id='pCty'>Country: </p>
+<p class='pProfile' id='pItem'>Your items: </p>
+</div>
+
+<div class='content' id='browseContent'>
+	<table id='itemTable'>
+	</table>
+</div>
+
+</body>
+
+</html>

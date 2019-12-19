@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+
+<title>pBay</title>
+<link rel='stylesheet' href='Item.css'>
+
+</head>
+
+<body onload='queryItem()'>
+
+<script src='AccountCheck.js'></script>
+<script src='ItemFunc.js'></script
+<script src='MainFunc.js'></script>
+<script src='QueryTable.js'></script>
+<script src='QueryItem.js'></script>
+
+<div class='header' id='header'>
+<button class='hlinks' style='float:left' onclick='window.location = "MainPage.html"'>Browse</button>
+<input class='sBar' type='text' id='sBar' placeholder='Search...'>
+<input class='sBtn' type='submit' id='sBtn' value='Search' onclick='search()'>
+<button class='hlinks' id='logout' style='float:right' onclick='logout()'>Log Out</button>
+<button class='hlinks' style='float:right' onclick='window.location = "ProfilePage.html"'>Profile</button>
+</div>
+
+<div class='content' id='itemContent'>
+	<img id='itemImg' title='Image'>
+	<div class='pItem'>
+		<h1 class='pItem' id='itemName'>Name</h1>
+		<p class='pItem' id='itemDesc'>Information</p>
+		<p class='pItem' id='itemMisc'>Misc Information</p>
+		<button class='itemLink' id='itemBack' style='float:left' onclick='window.history.back()'>Back to List</button>
+	</div>
+</div>
+
+
+</body>
+
+</html>

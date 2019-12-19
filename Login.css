@@ -1,0 +1,34 @@
+body{
+	font-family:'Lato',sans-serif;
+}
+
+.header{
+	border:1px solid #ccc;
+	background-color:#0000ff;
+	position:fixed;
+	top:0;
+	width:100%;
+	height:8%;
+	color:#ffffff;
+}
+
+.para{
+	font-size:105%;
+	float:right;
+	margin-right:10px;
+	top:50%;
+}
+
+.btn{
+	border:none;
+	font-size:105%;
+	background-color:inherit;
+	float:right;
+	top:50%;
+	padding:15.5px 10px;
+	margin-right:11px;
+	color:#ffffff;
+}
+.btn:hover{
+	background-color:#aaaaff;
+}

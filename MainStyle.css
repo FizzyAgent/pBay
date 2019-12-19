@@ -1,0 +1,25 @@
+@import 'Header.css';
+
+#browseContent{
+	padding-top:50px;
+}
+
+#itemTable{
+	empty-cells:hide;
+	width:100%;
+	float:center
+}
+
+#itemTable td{
+	width:30%;
+	text-align:center;
+	background-color:#ffffff;
+	padding-top:50px;
+	padding-bottom:20px;
+	border: 1px solid #000000;
+	cursor:pointer;
+}
+#itemTable td:hover{
+	background-color:#dddddd;
+}
+	

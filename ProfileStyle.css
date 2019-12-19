@@ -1,0 +1,36 @@
+@import 'Header.css';
+
+#profileContent{
+	padding-top:70px;
+	padding-left:20px;
+}
+
+#itemTable{
+	empty-cells:hide;
+	width:100%;
+	float:center
+}
+
+#pItem{
+	padding-top:20px;
+	font-size:110%;
+}
+
+#pImg{
+	width:15%;
+	float:left;
+	padding-right:2%;
+}
+
+#itemTable td{
+	width:30%;
+	text-align:center;
+	background-color:#ffffff;
+	padding-top:50px;
+	padding-bottom:20px;
+	border: 1px solid #000000;
+	cursor:pointer;
+}
+#itemTable td:hover{
+	background-color:#dddddd;
+}

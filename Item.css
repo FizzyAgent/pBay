@@ -1,0 +1,40 @@
+@import 'Header.css';
+
+#itemContent{
+	padding-top:60px;
+}
+
+.pItem{
+	text-align:left;
+}
+
+#itemContent h1{
+	padding-top:30px;
+}
+
+#itemDesc{
+	padding-top:10px;
+	font-size:110%;
+}
+
+#itemMisc{
+	padding-top:30px;
+	font-size:90%;
+}
+
+#itemBack{
+	margin-top:30px;
+}
+
+#itemContent img{
+	float:left;
+	height:400px;
+	padding:20px;
+	padding-left:50px;
+	padding-right:50px;
+}
+
+#itemContent button{
+	font-size:105%;
+}
+	
